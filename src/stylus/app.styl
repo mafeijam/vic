@@ -1,0 +1,181 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css)
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css)
+@import url(https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css)
+@import '../vendor/datepicker/bootstrap-datepicker.standalone.min.css'
+@import '../vendor/sweetalert/sweetalert2.css'
+@import 'mixin'
+@import 'variable'
+@import 'grid'
+@import 'panel'
+@import 'tabs'
+@import 'checkbox'
+@import 'ripple'
+@import 'select2'
+
+*
+  box-sizing border-box
+  font-family Noto Sans TC
+  &:focus
+    outline none
+
+body, html
+  font-size 12px
+  background-color #F2F9FB
+  color $dark-blue
+  margin 0
+  padding 0
+
+h1, h2, h3, h4, h5, h6
+  margin 0 0 10px 0
+
+.container
+  width 100%
+  max-width 1300px
+  margin 0 auto
+  padding 0 10px
+
+.box
+  background-color $info
+  width 100%
+  height 30px
+
+textarea
+  width 100%
+  min-height 110px
+  resize vertical
+  padding 3px 5px
+
+input[disabled], input[readonly]
+  background-color lighten($light-gray, 85%)
+
+input[type="text"], button, textarea
+  border-radius 2px
+  transition .3s
+
+input[type="text"], select, textarea
+  width 100%
+  border 1px solid $light-gray
+  padding 3px 5px
+  box-shadow none
+  height 30px
+  &:focus
+    outline none
+    border-color $dark-blue-lighter
+
+label
+  cursor pointer
+  user-select none
+
+button
+  padding 3px 25px
+  font-size 12px
+  outline none
+  border none
+  cursor pointer
+  min-height 30px
+  font-weight 600
+  &.primary
+    background-color $primary
+    color $white
+    &:hover
+      background-color darken($primary, 15%)
+  &.danger
+    background-color $danger
+    color $white
+    &:hover
+      background-color darken($danger, 15%)
+  &.success
+    background-color $success
+    color $white
+    &:hover
+      background-color darken($success, 15%)
+  &.warning
+    background-color $warning
+    color $white
+    &:hover
+      background-color darken($warning, 15%)
+  &.info
+    background-color $info
+    color $white
+    &:hover
+      background-color darken($info, 15%)
+
+.menu button
+  padding 3px 0
+  width 110px
+
+.control
+  display flex
+  align-items center
+  margin-top 5px
+  & .addon
+    margin-left -22px
+    margin-bottom 2px
+
+.flex
+  display flex
+  align-items center
+  &-top
+    align-items flex-start
+  &-between
+    justify-content space-between
+    //align-items flex-end
+
+.no-mb
+  margin-bottom 0
+
+.mb-10
+  margin-bottom 10px
+
+.mr-8
+  margin-right 8px
+
+.pt-10
+  padding-top 10px
+
+.text-lg
+  font-size 1.5em
+
+.bold
+  font-weight 900
+
+.small-btn
+  padding 5px 10px
+
+&::-webkit-scrollbar
+  width 8px
+  border-radius 2px
+&::-webkit-scrollbar-track
+  border-radius 10px
+&::-webkit-scrollbar-thumb
+  background-color rgba(181, 73, 91, .8)
+  border-radius 10px
+
+.min-h
+  min-height 224px
+
+.transition
+  transition .5s
+
+.fadeIn
+  position relative
+  animation fadeIn .5s ease-out forwards
+
+.fadeDown
+  position relative
+  animation fadeDown .5s ease-out forwards
+
+@keyframes fadeIn
+  from
+    opacity 0
+    transform translate3d(0, -10%, 0)
+  to
+    opacity 1
+    transform translate3d(0, 0, 0)
+
+@keyframes fadeDown
+  from
+    opacity 1
+  to
+    opacity 0
+    transform translate3d(-10%, 0, 0)

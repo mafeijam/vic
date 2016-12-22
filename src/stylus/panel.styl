@@ -1,0 +1,39 @@
+.panel
+  background-color $white
+  width 100%
+  color $white
+  &:not(:last-child)
+    margin-bottom 20px
+  &.default
+    & > .panel-header
+      background-color $dark-blue-lighter
+    & > .panel-body
+      border-color lighten($dark-blue-lighter, 30%)
+  &.primary
+    & > .panel-header
+      background-color $primary
+    & > .panel-body
+      border-color lighten($primary, 60%)
+  &.info
+    & > .panel-header
+      background-color $info
+    & > .panel-body
+      border-color lighten($info, 50%)
+
+.panel-header
+  font-size 1.15em
+  font-weight 500
+  padding 8px 12px
+  border-radius $border-radius $border-radius 0 0
+  border-bottom none
+  & + .panel-body
+    border-top none
+    border-radius 0 0 $border-radius $border-radius
+
+.panel-body
+  color #2C2C2C
+  padding 12px 18px
+  border-radius $border-radius
+  border 1px solid
+  border-bottom 3px solid
+  text-align justify

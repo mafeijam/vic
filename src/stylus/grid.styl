@@ -1,0 +1,23 @@
+.row
+  display flex
+  flex-wrap wrap
+  margin 0 '-%s' % $col-gutter
+  align-items center
+  &:not(:last-child)
+    margin-bottom 10px
+
+.col
+  padding 0 $col-gutter
+  flex 1 0 auto
+
+for i in 1..12
+  w = 100% / 12 * i
+  .is-{i}
+      flex 0 0 w
+  .sm-{i}
+    +mobile()
+      flex 0 0 w
+      &:not(:last-child)
+        margin-bottom 10px
+  .offset-{i}
+    margin-left w

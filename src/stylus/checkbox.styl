@@ -1,0 +1,59 @@
+input[type="checkbox"]
+  display none
+  & + label
+    margin-right 8px
+  & + label:before
+    content '\f00c'
+    font normal normal normal 10px/1 FontAwesome
+    color transparent
+    display inline-block
+    border 2px solid $light-gray
+    border-radius 2px
+    text-rendering auto
+    width 13px
+    height 13px
+    padding 2px 0 0 2px
+    background-color #FFF
+    margin-right 8px
+    transition .3s
+  &:checked + label:before
+    color $success
+    background-color lighten($success, 90%)
+    border-color $success
+  &:disabled + label:before
+    color lighten($light-gray, 50%)
+    background-color lighten($light-gray, 90%)
+    border-color lighten($light-gray, 50%)
+
+input[type="radio"]
+  display none
+  & + label
+    position relative
+    margin-right 8px
+  & + label:before
+    content ''
+    display inline-block
+    border 2px solid $light-gray
+    border-radius 50%
+    width 14px
+    height 14px
+    background-color #FFF
+    vertical-align -3px
+    margin-right 8px
+    transition .3s
+  & + label:after
+    content ''
+    display inline-block
+    border-radius 50%
+    width 8px
+    height 8px
+    background-color transparent
+    position absolute
+    top 5px
+    left 5px
+  &:checked + label:before
+    color $success
+    background-color lighten($success, 90%)
+    border-color $success
+  &:checked + label:after
+    background-color $success
